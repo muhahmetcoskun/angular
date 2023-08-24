@@ -1,0 +1,24 @@
+<mat-toolbar class="ustmenu"> 
+    <mat-button-toggle (click)="sidenav.toggle()" value="left">
+        <mat-icon>menu</mat-icon>
+      </mat-button-toggle>
+</mat-toolbar>
+
+<mat-drawer-container class="example-container">
+    <mat-drawer #sidenav [(opened)]="opened"  mode="side" opened>
+
+       <mat-nav-list>
+
+        
+
+       </mat-nav-list>
+
+
+        </mat-drawer>
+    <mat-drawer-content>
+    
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
+
+
