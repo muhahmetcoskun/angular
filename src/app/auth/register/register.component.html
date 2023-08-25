@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="form-container">
+        <div class="title">Kayıt</div>
+        <form [formGroup]="loginForm">
+            <mat-form-field appearance="outline">
+                <mat-label> İsim</mat-label>
+                <input matInput  formControlName="firstname"/>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Soyisim</mat-label>
+                <input matInput formControlName="lastname"/>
+            </mat-form-field>
+  
+            <mat-form-field appearance="outline">
+              <mat-label>Kullanıcı Adı</mat-label>
+              <input matInput  formControlName="username"/>
+          </mat-form-field>
+  
+            <mat-form-field appearance="outline">
+                <mat-label>Şifre</mat-label>
+                <input type="password" matInput  formControlName="password"/>
+  
+            </mat-form-field>
+            
+            <mat-form-field appearance="outline">
+                <mat-label>Telefon</mat-label>
+                <input  matInput  formControlName="phonenumber"/>
+  
+            </mat-form-field>
+            
+            <mat-form-field appearance="outline">
+                <mat-label>E-Posta</mat-label>
+                <input matInput formControlName="email"/>
+            </mat-form-field>
+            
+        </form>
+        <div class="buttons-container">
+            <button mat-raised-button class="login-button">
+                Kaydol
+            </button>
+            <p>Veya</p>
+            <button mat-button routerLink="/login">Giriş Yap</button>
+        </div>
+    </div>
+  </div>
+  
+  

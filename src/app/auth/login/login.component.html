@@ -1,0 +1,41 @@
+
+  
+
+  <div class="container">
+    <div class="form-container">
+        <div class="title">Giriş</div>
+        <form #f="ngForm" (ngSubmit)="f.form.valid && login()">
+            <mat-form-field appearance="outline">
+                <mat-label>Kullanıcı Adı</mat-label>
+                <input matInput id="username"type="number" placeholder="Kullanıcı Adı" pInputText 
+            name="username"
+                [(ngModel)]="user.username"
+                #username="ngModel" />
+                <mat-error>
+  
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Şifrenizi Giriniz</mat-label>
+                <input type="password" matInput id="password" placeholder="Şifre" 
+               name="password"
+                [(ngModel)]="user.password"
+                #password="ngModel"/>
+                <mat-error>
+               
+                </mat-error>
+            </mat-form-field>
+        </form>
+        <div class="buttons-container">
+            <button type="submit" [disabled]="f.invalid" (click)="login()" mat-raised-button class="login-button">
+                Giriş Yap
+            </button>
+            <p>Veya</p>
+            <button  mat-button routerLink="/createuser">Hesap Oluştur</button>
+            <!-- {{loginForm.value | json}} -->
+        </div>
+    </div>
+  </div>
+  
+  
+  
